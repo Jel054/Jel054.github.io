@@ -21,7 +21,7 @@ let ricePoints = 0,
 function letter(score) {
 	let result = 'letter failed';
 	if (score >= 60) {
-		result = ['D', 'C', 'B', 'A'][Math.floor(score / 10) - 6];
+		result = ['5', '4', '3', '2'][Math.floor(score / 10) - 6];
 		if (score % 10 >= 7) {
 			result += '+';
 		} else if (score % 10 < 3) {
@@ -60,8 +60,8 @@ function start() {
 	document.getElementById('info').remove();
 	document.getElementById('main').innerHTML =
 		'<div id="prompt"><p id="counter">69/420</p><p id="question">r u a ' +
-		'hoe?</p><div class="buttons"><button onclick="yes()" class="yes">Yes</button><' +
-		'button onclick="no()" class="no">No</button></div></div>';
+		'hoe?</p><div class="buttons"><button onclick="yes()" class="yes">Да</button><' +
+		'button onclick="no()" class="no">Нет</button></div></div>';
 	nextQuestion();
 }
 
@@ -70,8 +70,8 @@ function end() {
 	document.getElementById('prompt').remove();
 	let weightedScore = Math.floor(weightedPoints / weightedMax * 100);
 	document.getElementById('main').innerHTML =
-		'<div id="end"><h1>Congratulations!</h1><p>Rice Purity Score: <stro' +
+		'<div id="end"><h1>Поздравляю!</h1><p>Результат: <stro' +
 		'ng>' + ricePoints + '/100</strong> (' + letter(ricePoints) + ') </' +
-		'p><p>Weighted Purity Score: <strong>' + weightedScore + '/100</str' +
+		'p><p>Взвешенный результат: <strong>' + weightedScore + '/100</str' +
 		'ong> (' + letter(weightedScore) + ') </p></div>'
 }
