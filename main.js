@@ -21,7 +21,7 @@ let ricePoints = 0,
 function letter(score) {
 	let result = 'letter failed';
 	if (score >= 60) {
-		result = ['5', '4', '3', '2'][Math.floor(score / 10) - 6];
+		result = ['2', '3', '4', '5'][Math.floor(score / 10) - 6];
 		if (score % 10 >= 7) {
 			result += '+';
 		} else if (score % 10 < 3) {
